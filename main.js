@@ -28,6 +28,25 @@ function paintSidebarProgress(){
 
 document.addEventListener('DOMContentLoaded', paintSidebarProgress);
 
+/* ---------------- Lessons dropdown toggle ---------------- */
+function toggleLessons(){
+  const list = document.getElementById('lessons-list');
+  const btn = document.getElementById('lessons-toggle-btn');
+  if(!list || !btn) return;
+  const isOpen = list.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  localStorage.setItem('tajweed-lessons-open', isOpen ? '1' : '0');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.getElementById('lessons-list');
+  const btn = document.getElementById('lessons-toggle-btn');
+  if(list && btn && localStorage.getItem('tajweed-lessons-open') === '1'){
+    list.classList.add('open');
+    btn.classList.add('open');
+  }
+});
+
 /* ---------------- Quiz engine ----------------
    Expects a container: <div id="quiz" data-chapter="noon-sakinah"></div>
    and a QUIZ_DATA array defined on the page before this script runs:

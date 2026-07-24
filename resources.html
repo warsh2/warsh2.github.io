@@ -11,8 +11,13 @@
 <div class="shell">
   <aside class="sidebar">
     <p class="brand">منارة العلم الشافع<span>رواية ورش</span></p>
+
+    <button class="lessons-toggle" id="lessons-toggle-btn" onclick="toggleLessons()">
+      <span>فصول الدورة (١٧)</span>
+      <span class="chevron">▾</span>
+    </button>
+    <div class="lessons-list" id="lessons-list">
     <nav>
-      <a class="chapter" href="index.html"><span class="num">•</span> الرئيسية</a>
       <a class="chapter" href="madkhal.html" data-chapter="madkhal"><span class="num">٠١</span> مدخل إلى علم التجويد <span class="check">✓</span></a>
       <span class="chapter" style="opacity:.5"><span class="num">٠٢</span> الاستعاذة والبسملة (قريباً)</span>
       <span class="chapter" style="opacity:.5"><span class="num">٠٣</span> مخارج الحروف (قريباً)</span>
@@ -30,8 +35,11 @@
       <span class="chapter" style="opacity:.5"><span class="num">١٥</span> ياءات الإضافة (قريباً)</span>
       <span class="chapter" style="opacity:.5"><span class="num">١٦</span> الوقف والابتداء (قريباً)</span>
       <span class="chapter" style="opacity:.5"><span class="num">١٧</span> التحريرات (قريباً)</span>
-      <a class="chapter active" href="resources.html"><span class="num">📚</span> مصادر ومراجع</a>
     </nav>
+    </div>
+    <div class="sidebar-links">
+      <a class="chapter active" href="resources.html"><span class="num">📚</span> مصادر ومراجع</a>
+    </div>
     <a class="back" href="index.html">→ العودة إلى الدورة</a>
   </aside>
 
