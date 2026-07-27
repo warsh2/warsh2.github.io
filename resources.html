@@ -3,29 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مصادر ومراجع — منارة العلم الشافع</title>
+<title>مصادر ومراجع — منصة ورش</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="shell">
-  <aside class="sidebar">
-    <p class="brand">منارة العلم الشافع<span>رواية ورش</span></p>
-    <nav>
-      <a class="chapter" href="duroos.html"><span class="num">📖</span> الدروس</a>
-      <a class="chapter active" href="resources.html"><span class="num">📚</span> مصادر ومراجع</a>
-    </nav>
-    <a class="back" href="index.html">→ العودة إلى الرئيسية</a>
-  </aside>
+<div class="navbar-wrap">
+<div class="navbar">
+  <a class="nav-brand" href="index.html" style="text-decoration:none;">
+    <div class="nav-logo">و</div>
+    <span>منصة ورش</span>
+  </a>
+  <button class="menu-btn" id="menu-btn" onclick="toggleDropdown()" aria-label="القائمة">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<div class="dropdown" id="nav-dropdown">
+  <a href="duroos.html">📖 الدروس</a>
+  <a class="active" href="resources.html">📚 مصادر ومراجع</a>
+</div>
+</div>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">للاستزادة والحفظ</p>
-      <h1>مصادر ومراجع</h1>
-      <p class="lead">إلى جانب "منارة العلم الشافع"، هذه ثلاثة من أشهر المتون الشعرية التي
-        اعتمد عليها علماء التجويد والقراءات قروناً، مرتّبة من الأسهل إلى الأعمق، مع روابط
-        لقراءتها كاملة.</p>
-    </section>
+<main>
+  <a class="top-back-link" href="index.html">→ العودة إلى الرئيسية</a>
+  <section class="hero">
+    <p class="eyebrow">للاستزادة والحفظ</p>
+    <h1>مصادر ومراجع</h1>
+    <p class="lead">إلى جانب "منارة العلم الشافع"، هذه ثلاثة من أشهر المتون الشعرية التي
+      اعتمد عليها علماء التجويد والقراءات قروناً، مرتّبة من الأسهل إلى الأعمق، مع روابط
+      لقراءتها كاملة.</p>
+  </section>
 
     <div class="resource-card">
       <h3>تحفة الأطفال والغلمان <span class="level">مبتدئ</span></h3>
@@ -65,7 +72,6 @@
     </div>
 
   </main>
-</div>
 
 <script src="main.js"></script>
 </body>

@@ -3,29 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مدخل إلى علم التجويد — منارة العلم الشافع</title>
+<title>مدخل إلى علم التجويد — منصة ورش</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="shell">
-  <aside class="sidebar">
-    <p class="brand">منارة العلم الشافع<span>رواية ورش</span></p>
-    <nav>
-      <a class="chapter" href="duroos.html"><span class="num">📖</span> الدروس</a>
-      <a class="chapter" href="resources.html"><span class="num">📚</span> مصادر ومراجع</a>
-    </nav>
-    <a class="back" href="index.html">→ العودة إلى الرئيسية</a>
-  </aside>
+<div class="navbar-wrap">
+<div class="navbar">
+  <a class="nav-brand" href="index.html" style="text-decoration:none;">
+    <div class="nav-logo">و</div>
+    <span>منصة ورش</span>
+  </a>
+  <button class="menu-btn" id="menu-btn" onclick="toggleDropdown()" aria-label="القائمة">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<div class="dropdown" id="nav-dropdown">
+  <a class="active" href="duroos.html">📖 الدروس</a>
+  <a href="resources.html">📚 مصادر ومراجع</a>
+</div>
+</div>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">الفصل ٠١</p>
-      <h1>مدخل إلى علم التجويد</h1>
-      <p class="lead">قبل الدخول في الأحكام التفصيلية، لا بد من معرفة: ما هو علم التجويد؟ وما حكمه؟
-        وكم مرتبة للتلاوة؟ وما الخطأ الذي يجب الحذر منه في القراءة؟ هذا الفصل يضع الأساس الذي
-        تُبنى عليه بقية الدورة.</p>
-    </section>
+<main>
+  <a class="top-back-link" href="duroos.html">→ العودة إلى قائمة الدروس</a>
+  <section class="hero">
+    <p class="eyebrow">الفصل ٠١</p>
+    <h1>مدخل إلى علم التجويد</h1>
+    <p class="lead">قبل الدخول في الأحكام التفصيلية، لا بد من معرفة: ما هو علم التجويد؟ وما حكمه؟
+      وكم مرتبة للتلاوة؟ وما الخطأ الذي يجب الحذر منه في القراءة؟ هذا الفصل يضع الأساس الذي
+      تُبنى عليه بقية الدورة.</p>
+  </section>
 
     <h2>تعريف علم التجويد</h2>
 
@@ -171,7 +178,6 @@
     <a class="next-link" href="duroos.html">→ العودة إلى قائمة الدروس</a>
 
   </main>
-</div>
 
 <script src="main.js"></script>
 <script>

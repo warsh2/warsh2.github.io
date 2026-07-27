@@ -20,7 +20,7 @@ function markComplete(chapterId){
 
 function paintSidebarProgress(){
   const progress = getProgress();
-  document.querySelectorAll('.sidebar .chapter[data-chapter]').forEach(el => {
+  document.querySelectorAll('[data-chapter]').forEach(el => {
     const id = el.getAttribute('data-chapter');
     if(progress[id]){ el.classList.add('done'); }
   });
@@ -28,22 +28,18 @@ function paintSidebarProgress(){
 
 document.addEventListener('DOMContentLoaded', paintSidebarProgress);
 
-/* ---------------- Lessons dropdown toggle ---------------- */
-function toggleLessons(){
-  const list = document.getElementById('lessons-list');
-  const btn = document.getElementById('lessons-toggle-btn');
-  if(!list || !btn) return;
-  const isOpen = list.classList.toggle('open');
-  btn.classList.toggle('open', isOpen);
-  localStorage.setItem('tajweed-lessons-open', isOpen ? '1' : '0');
+/* ---------------- Navbar dropdown ---------------- */
+function toggleDropdown(){
+  const dd = document.getElementById('nav-dropdown');
+  if(dd){ dd.classList.toggle('open'); }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const list = document.getElementById('lessons-list');
-  const btn = document.getElementById('lessons-toggle-btn');
-  if(list && btn && localStorage.getItem('tajweed-lessons-open') === '1'){
-    list.classList.add('open');
-    btn.classList.add('open');
+document.addEventListener('click', (e) => {
+  const dd = document.getElementById('nav-dropdown');
+  const btn = document.getElementById('menu-btn');
+  if(!dd || !dd.classList.contains('open')) return;
+  if(!dd.contains(e.target) && !btn.contains(e.target)){
+    dd.classList.remove('open');
   }
 });
 
